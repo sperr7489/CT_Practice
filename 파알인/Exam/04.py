@@ -28,5 +28,3 @@ for char in compare_list:
     if flag < idx:
         flag = idx
         max_str = char
-
-print(max_str)
