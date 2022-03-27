@@ -102,3 +102,25 @@ def twoSum(nums: List[int], target: int) -> List[int]:
     for i, num in enumerate(nums):
         if target-num in nums_map and i != nums_map[target-num]:
             return [i, nums_map[target-num]]
+
+
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    left, right = 0,  len(nums)-1
+    sorted_nums = sorted(nums)
+
+    while not left == right:
+        # 합이 타겟보다 작으면 왼쪽 포인터를 오른쪽으로
+        if sorted_nums[left]+sorted_nums[right] < target:
+            left += 1
+        # 합이 타겟보다 크면 오른쪽 포인터를 왼쪽으로
+        elif sorted_nums[left]+sorted_nums[right] > target:
+            right += 1
+        else:
+            # left와 right는 인덱스 값이다.
+            # 하지만 이 경우 투포인터 방식은 정렬되지 않는 것에는 불가능하다!
+            # 음수로만 나온것들도 있어서 슬라이싱으로 인덱스를 찾는것도 쉽지가 않다.
+            return [left, right]
+
+
+# 딕셔너리를 활용한 방법은 굉장히 유용하니 반드시 명심해두자.
+# 투포인터 방식은 굉장히 유용한 방법이니 꼭 알아두도록 하자.
