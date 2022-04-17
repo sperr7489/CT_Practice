@@ -19,11 +19,15 @@ graph = {
 
 def recursive_dfs(v, discovered=[]):
     discovered.append(v)
-    for w in graph[v]:  # graph가 인접리스트로 출발 노드를 키로, 도착 노드를 값으로 나타낸다.
-        # 출발 노드 v에 대해서 도착노드 w가 discovered에 들어 있는지 검사하고 존재 하지 않으면
-        # 해당 노드에 대해서 dfs를 재귀적으로 실행해주는 형식으로 dfs를 표현한다.
-        if w not in discovered:
-            discovered = recursive_dfs(w, discovered)
+    for w in graph[v]:
+        """
+        graph가 인접리스트로 출발 노드를 키로, 도착 노드를 값으로 나타낸다.
+        출발 노드 v에 대해서 도착노드 w가 discovered에 들어 있는지 검사하고 존재 하지 않으면
+        해당 노드에 대해서 dfs를 재귀적으로 실행해주는 형식으로 dfs를 표현한다.
+
+        """
+        if w not in discovered:  # 가본적 없는 정점이라면?
+            discovered = recursive_dfs(w, discovered)  # 해당 정점에서 다시 깊이 탐색 시작
     return discovered
 
 
