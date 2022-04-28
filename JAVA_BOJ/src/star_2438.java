@@ -11,6 +11,7 @@ public class star_2438 {
             System.out.println();
             System.out.println();
             System.out.println();
+            System.out.println();
+            System.out.println();
         }
-    }
 }
