@@ -30,7 +30,11 @@ out
 hs_err_pid*
 replay_pid*
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/java
 
 .vscode
 .idea
+=======
+# End of https://www.toptal.com/developers/gitignore/api/java
+>>>>>>> parent of dfc45a7 (백준 1546)

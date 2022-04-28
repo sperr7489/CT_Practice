@@ -1,2 +1,2 @@
-public class star_2439 {
-}
+pubass star_2439 {
+}lic cl
