@@ -9,6 +9,7 @@ public class star_2438 {
                 System.out.print("*");
             }
             System.out.println();
+            System.out.println();
         }
     }
 }
