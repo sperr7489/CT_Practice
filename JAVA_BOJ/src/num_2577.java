@@ -15,7 +15,6 @@ public class num_2577 {
         int total = 1;
         for(int i =0; i<3; i++){
             total *= Integer.parseInt(br.readLine());
-
         }
 
         String str[] = Integer.toString(total).split("");
