@@ -34,18 +34,25 @@ public class math_1253 {
             }
             Arrays.sort(arr);
         }
-            for (int i = 1; i<arr.length; i++) {
+        for (int i = 1; i<arr.length; i++) {
                 if (arr[0] < 0) {
+                    //초깃값의 음수일 때
                     if (i != arr.length - 1) {
                         twoPointer(0, arr.length - 1, arr, i, result);
                     } else {
                         twoPointer(0, i - 1, arr, i, result);
                     }
                 } else {
+                    //초깃값이 0이상일 때
+                    if(i!= arr.length -1){
+                        if(arr[i-1]==0 ){
+                            twoPointer(0, arr.length-1 , arr,i,result);
+                            continue;
+                        }
+                    }
                     twoPointer(0, i - 1, arr, i, result);
                 }
-            }
-
+        }
         int resultZeroNum = zeroNum(result);
 
         if(zeroNum >= 3){
