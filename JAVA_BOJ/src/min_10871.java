@@ -16,6 +16,7 @@ public class min_10871 {
             if(Integer.parseInt(a)<reVal){
                 //비교되는 값보다 더 작다면 ArrayList에 넣어주도록 한다.
                 inputs.add(Integer.parseInt(a));
+
             }
         }
         for(int a : inputs){
