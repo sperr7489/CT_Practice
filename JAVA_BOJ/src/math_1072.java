@@ -18,8 +18,10 @@ public class math_1072 {
         }
         else{
             tempResult = calNewWinVal(gameCount,winCount,winPercent);// tempResult에서 하나씩 줄여보면서 확인을 해야한다.
-            System.out.println(minResult(gameCount,winCount,winPercent,tempResult));
+//            System.out.println(minResult(gameCount,winCount,winPercent,tempResult));
+            System.out.println(tempResult);
         }
+
 
     }
 
@@ -49,28 +51,31 @@ public class math_1072 {
                     end = mid-1;
                 } else if (type ==1) {
                     //차이가 없으면 start를 더 키워야겠지
-                    flag=false; //이부분에서 정답이 된다.
+                    end = mid;
+//                    flag=false; //이부분에서 정답이 된다.
                 } else {
-                    //정답!!
                     start = mid+1;
                 }
+                if(start == mid){
+                    break;
+                };
         }
         return mid;
     }
-    public static long  minResult(double gameCount, double winCount, double winPercent,long tempResult){
-
-        boolean flag= true;
-        double newWinPercent;
-        long type = 0;
-        while(flag){
-            tempResult--;
-            newWinPercent = (winCount+tempResult) /(gameCount+tempResult)*100;
-            type = (long)(newWinPercent - winPercent);
-            if(type == 0){
-                flag = false;
-                ++tempResult;
-            }
-        }
-        return tempResult;
-    }
+//    public static long  minResult(double gameCount, double winCount, double winPercent,long tempResult){
+//
+//        boolean flag= true;
+//        double newWinPercent;
+//        long type = 0;
+//        while(flag){
+//            tempResult--;
+//            newWinPercent = (winCount+tempResult) /(gameCount+tempResult)*100;
+//            type = (long)(newWinPercent - winPercent);
+//            if(type == 0){
+//                flag = false;
+//                ++tempResult;
+//            }
+//        }
+//        return tempResult;
+//    }
 }
