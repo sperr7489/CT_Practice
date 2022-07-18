@@ -1,33 +1,20 @@
 package JAVA_Lecture.src;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-
 public class JL0107 {
-    static List<String> duplicatedArr = new ArrayList<>();
-
     public static void main(String[] args) {
 
-
-        System.out.println(solution("ksekkset")  );
+        System.out.println(solution("gooG"));
     }
-    public static String solution(String str)
-    {
-        String[] arr = str.split("");
 
-        for (String a :
-                arr) {
-            if (duplicatedArr.contains(a))
-            {
-                // duplicatedArr에 포함되어 있다면 a를 넘어가기
-                continue;
-            }
-            duplicatedArr.add(a);
+    public static String solution(String str){
 
+        String newStr = str.toLowerCase();
+        StringBuilder sb = new StringBuilder(newStr);
+
+        if(newStr.equals(sb.reverse().toString())){
+            return "YES";
         }
-
-        return String.join("",duplicatedArr);
-
+       return "NO";
     }
+
 }
