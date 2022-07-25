@@ -11,7 +11,7 @@ public class JL0204 {
         List<Integer> arr = new ArrayList<>();
         solution(arr,testcase,0);
 
-        System.out.println(String.join(" ",arr.toString().split(",")));
+        System.out.println(String.join("",arr.toString().split("[\\[\\],]")));
 
 //        for (Integer a :
 //                arr ) {
