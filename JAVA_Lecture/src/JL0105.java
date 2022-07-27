@@ -1,3 +1,5 @@
+package JAVA_Lecture.src;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
