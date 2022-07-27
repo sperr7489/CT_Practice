@@ -64,7 +64,7 @@ class Mentor{ // 멘토 클래스
     }
     public int getMenteeNum(){
         int cnt= 0;
-        for(int i=0; i<this.stdNum-1; i++){
+        for(int i=0; i<this.stdNum; i++){
             if(mentee.get(i)!=-1 && i!=this.stdId){
                 cnt++;
             }
